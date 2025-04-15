@@ -3,13 +3,20 @@ name = "eng-dados-spark"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Your Name",email = "you@example.com"}
+    { name = "Your Name", email = "you@example.com" }
 ]
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.12,<4.0"
 dependencies = [
+    "pyspark==3.3.2",
+    "delta-spark==2.3.0",
+    "pyiceberg==0.5.0",
+    "jupyterlab",
+    "notebook",
+    "ipykernel",
+    "matplotlib",
+    "pandas"
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
