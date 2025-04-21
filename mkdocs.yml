@@ -1,0 +1,48 @@
+site_name: Documentação do Projeto
+
+repo_url: https://github.com/pauloFrancisconi/eng-dados-spark
+repo_name: GitHub
+
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.tabs
+    - navigation.top
+    - content.code.copy
+    - content.action.edit
+    - content.tabs.link
+    - search.highlight
+    - search.share
+    - navigation.expand
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+nav:
+  - Início: index.md
+  - Delta Lake: delta.md
+  - Apache Iceberg: iceberg.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - codehilite
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.details
