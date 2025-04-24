@@ -129,4 +129,4 @@ Remove a linha da tabela Delta onde o id é igual a 9999, demonstrando a operaç
 df_final = spark.read.format("delta").load("../output/delta/cidades")
 df_final.show()
 ```
-Carrega novamente os dados da tabela Delta após as operações e exibe as primeiras linhas para verificar o estado final da tabela.
+Carrega novamente os dados da tabela Delta em um dataframe final após as operações e exibe as primeiras linhas para verificar o estado final da tabela.

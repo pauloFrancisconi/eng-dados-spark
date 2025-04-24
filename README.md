@@ -57,7 +57,7 @@ jupyter lab
 
 ```
 
-ou se preferir, rodar o projeto na IDE como vscode. lLembre-se de utilizar o kernel onde as dependências do poetry foram instaladas
+ou se preferir, rodar o projeto na IDE como vscode. Lembre-se de utilizar o kernel onde o Poetry instalou todas as dependências do projeto.
 
 ##  Estrutura do Projeto
 
@@ -69,7 +69,6 @@ ou se preferir, rodar o projeto na IDE como vscode. lLembre-se de utilizar o ker
 ├── output/                 # Tabelas geradas pelo Spark
 ├── poetry.lock
 ├── pyproject.toml
-├── spark_session.py        # Função utilitária para iniciar sessão Spark
 └── README.md
 ```
 
