@@ -15,10 +15,40 @@ O arquivo CSV contém as seguintes colunas:
 
 localizado em `data/cidades_brasileiras.csv`.
 
+## Modelo ER
+
+A estrutura da tabela segue um modelo entidade-relacionamento simples, com uma única entidade `CIDADES`, cujos atributos são:
+
+- `id`: Identificador único da cidade (chave primária)
+- `cidade`: Nome da cidade
+- `estado`: Nome do estado
+- `sigla`: Sigla do estado
+- `ibge`: Código IBGE da cidade
+- `latitude`: Latitude geográfica
+- `longitude`: Longitude geográfica
+
+## Criação do Schema e import do dataset
+
+```
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType
+schema = StructType([
+    StructField("id", IntegerType(), False),
+    StructField("cidade", StringType(), True),
+    StructField("estado", StringType(), True),
+    StructField("sigla", StringType(), True),
+    StructField("ibge", IntegerType(), True),
+    StructField("latitude", DoubleType(), True),
+    StructField("longitude", DoubleType(), True)
+])
+df = spark.read.csv("../data/cidades_brasileiras.csv", header=True, schema=schema)
+df.show(5)
+```
+
 ## Criação da Tabela
 
-```python
-df.writeTo("spark_catalog.default.cidades_iceberg").using("iceberg").createOrReplace()
+```
+df.writeTo("local.cidades_iceberg").using("iceberg").createOrReplace()
+
 ```
 
 ## INSERT

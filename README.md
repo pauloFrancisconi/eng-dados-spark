@@ -14,10 +14,14 @@ Este repositório contém um projeto de demonstração de uso das tecnologias Ap
 
 ## Requisitos
 
-- Python 3.12
+- Python 3.11
 - [Poetry](https://python-poetry.org/docs/#installation)
 - Java 8 ou superior
 - Jupyter Lab
+
+### Recomendações
+
+Rodar o ambiente desse projeto em um Sistema Ubuntu
 
 ## Setup do Ambiente
 
@@ -50,9 +54,12 @@ poetry shell
 
 ```bash
 jupyter lab
+
 ```
 
-## 📁 Estrutura do Projeto
+ou se preferir, rodar o projeto na IDE como vscode. lLembre-se de utilizar o kernel onde as dependências do poetry foram instaladas
+
+##  Estrutura do Projeto
 
 ```
 .
@@ -85,7 +92,6 @@ Colunas:
 
 - `notebooks/delta_lake.ipynb`: Criação da tabela Delta + INSERT, UPDATE, DELETE
 - `notebooks/iceberg.ipynb`: Criação da tabela Iceberg + INSERT, UPDATE, DELETE
-- `notebooks/spark_init.ipynb`: Inicialização da sessão Spark
 
 ## Documentação
 

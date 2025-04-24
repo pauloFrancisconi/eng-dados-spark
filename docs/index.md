@@ -1,10 +1,10 @@
 
 ## Ferramentas utilizadas
 
-- Python 3.12
-- PySpark 3.3.2
-- Delta Lake 2.3.0
-- Apache Iceberg 1.4.2
+- Python 3.11
+- PySpark 3.5.3
+- Delta Lake 3.2.0
+- Apache Iceberg 0.5.0
 - Poetry para gerenciamento do ambiente
 - Jupyter Lab para os notebooks
 - MkDocs para documentação
@@ -18,7 +18,19 @@
 
 ## Dataset
 
-O dataset contém dados públicos de cidades brasileiras
+O dataset contém dados públicos de cidades brasileiras.
+### Estrutura dos dados CSV
+
+O arquivo CSV contém as seguintes colunas:
+- id
+- cidade
+- estado
+- sigla
+- ibge
+- latitude
+- longitude
+
+localizado em `data/cidades_brasileiras.csv`.
 
 ## Conteúdo
 
