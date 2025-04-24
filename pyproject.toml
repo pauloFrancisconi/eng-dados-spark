@@ -1,28 +1,25 @@
-[project]
+[tool.poetry]
 name = "eng-dados-spark"
 version = "0.1.0"
-description = ""
-authors = [
-    { name = "Your Name", email = "you@example.com" }
-]
+description = "Projeto PySpark com Delta Lake e Iceberg"
+authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-requires-python = ">=3.12,<4.0"
-dependencies = [
-    "pyspark==3.3.2",
-    "delta-spark==2.3.0",
-    "pyiceberg==0.5.0",
-    "jupyterlab",
-    "notebook",
-    "ipykernel",
-    "matplotlib",
-    "pandas"
-]
 
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+pyspark = "3.5.3"
+delta-spark = "3.2.0"
+pyiceberg = "0.5.0"
+notebook = "*"
+ipykernel = "*"
+matplotlib = "*"
+pandas = "*"
+jupyterlab = "4.2.5"
 
 [tool.poetry.group.dev.dependencies]
 mkdocs = "^1.6.1"
 mkdocs-material = "^9.6.12"
 
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
